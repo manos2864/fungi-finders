@@ -1,9 +1,10 @@
-import paths from "@/routing/paths";
 import { NavLink } from "react-router-dom";
+import paths from "@/routing/paths";
 import logo from "@/assets/fungi-finders.svg";
+import { BasicWrapper } from "@/wrappers";
 
 const Navigation = () => (
-  <>
+  <BasicWrapper>
     <img src={logo} alt="Fungi Finders" />
 
     <nav className="primary-navigation">
@@ -21,6 +22,6 @@ const Navigation = () => (
         </li>
       </ul>
     </nav>
-  </>
+  </BasicWrapper>
 );
 export default Navigation;
