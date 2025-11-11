@@ -1,10 +1,10 @@
 import NavButton from "@/components/NavButton";
 import getToKnowYourMushrooms from "@/assets/get-to-know.webp";
-import { BasicWrapper } from "@/wrappers";
+import { WideWrapper, SectionWrapper } from "@/wrappers";
 
 const GetToKnowYourMushrooms = () => (
-  <section>
-    <BasicWrapper>
+  <SectionWrapper className="bg-extra-dark">
+    <WideWrapper>
       <div>
         <div>
           <img
@@ -14,7 +14,7 @@ const GetToKnowYourMushrooms = () => (
         </div>
 
         <div>
-          <h2>Get to know your mushrooms</h2>
+          <h2 className="fs-h-regular">Get to know your mushrooms</h2>
 
           <p>
             Successful and safe mushroom foraging begins with a deep
@@ -36,8 +36,8 @@ const GetToKnowYourMushrooms = () => (
           </NavButton>
         </div>
       </div>
-    </BasicWrapper>
-  </section>
+    </WideWrapper>
+  </SectionWrapper>
 );
 
 export default GetToKnowYourMushrooms;

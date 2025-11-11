@@ -1,0 +1,29 @@
+@mixin generate-color-utilities($colors-map) {
+  @each $name, $value in $colors-map {
+    @if str-index($name, "text-") == 1 {
+      .#{$name} {
+        color: #{$value};
+      }
+    } @else if str-index($name, "background-") == 1 {
+      .#{$name} {
+        background-color: #{$value};
+      }
+    }
+  }
+}
+
+@mixin generate-border-radius-utilities($border-radius-map) {
+  @each $name, $value in $border-radius-map {
+    .#{"border-" + $name} {
+      border-radius: #{$value};
+    }
+  }
+}
+
+@mixin generate-font-sizes-utilities($font-sizes-map) {
+  @each $name, $value in $font-sizes-map {
+    .#{$name} {
+      font-size: #{$value};
+    }
+  }
+}

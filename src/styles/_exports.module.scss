@@ -1,0 +1,7 @@
+@import "./variables.scss";
+
+:export {
+  @each $key, $value in $sizes-map {
+    size#{$key}: $value;
+  }
+}

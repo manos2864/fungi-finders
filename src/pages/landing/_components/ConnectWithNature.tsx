@@ -1,13 +1,13 @@
 import NavButton from "@/components/NavButton";
 import connectWithNature from "@/assets/nature.webp";
-import { WideWrapper } from "@/wrappers";
+import { WideWrapper, SectionWrapper } from "@/wrappers";
 
 const ConnectWithNature = () => (
-  <section>
+  <SectionWrapper>
     <WideWrapper>
       <div>
         <div>
-          <h2>Connect with Nature</h2>
+          <h2 className="fs-h-regular">Connect with Nature</h2>
 
           <p>
             Experience the beauty of the great outdoors while foraging for
@@ -32,7 +32,7 @@ const ConnectWithNature = () => (
         </div>
       </div>
     </WideWrapper>
-  </section>
+  </SectionWrapper>
 );
 
 export default ConnectWithNature;

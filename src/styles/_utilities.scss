@@ -1,3 +1,10 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+@include generate-color-utilities($colors);
+@include generate-border-radius-utilities($border-radius-variations);
+@include generate-font-sizes-utilities($font-sizes);
+
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -6,4 +13,8 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.text-center {
+  text-align: center;
 }

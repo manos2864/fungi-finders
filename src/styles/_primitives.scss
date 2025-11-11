@@ -17,13 +17,31 @@
   --clr-red-500: hsl(359, 34%, 24%);
   --clr-teal-500: hsl(186, 42%, 25%);
 
+  // Sizes
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-10: 0.625rem;
+  --size-12: 0.75rem;
+  --size-14: 0.875rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-32: 2rem;
+  --size-48: 3rem;
+  --size-60: 3.75rem;
+  --size-72: 4.5rem;
+  --size-80: 5rem;
+  --size-120: 7.5rem;
+  --size-128: 8rem;
+
   // Fonts
-  --fs-300: 0.875rem;
-  --fs-400: 1rem;
-  --fs-500: 1.125rem;
-  --fs-600: 1.25rem;
-  --fs-700: 1.5rem;
-  --fs-800: 2rem;
-  --fs-900: 3.75rem;
-  --fs-1000: 3.75rem;
+  --fs-300: var(--size-14);
+  --fs-400: var(--size-16);
+  --fs-500: var(--size-18);
+  --fs-600: var(--size-20);
+  --fs-700: var(--size-24);
+  --fs-800: var(--size-32);
+  --fs-900: var(--size-60);
+  --fs-1000: var(--size-60);
 }

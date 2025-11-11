@@ -1,10 +1,13 @@
-import { BasicWrapper } from "@/wrappers";
+import { BasicWrapper, NarrowWrapper, SectionWrapper } from "@/wrappers";
+import { SECTION_SIZE_VARIANTS } from "@/wrappers/SectionWrapper";
 
 const Intro = () => (
-  <section className="hero">
+  <SectionWrapper className="hero" sizeVariant={SECTION_SIZE_VARIANTS.COMPACT}>
     <BasicWrapper>
       <h1>Discover the World of Mushroom Foraging</h1>
+    </BasicWrapper>
 
+    <NarrowWrapper>
       <p>
         Mushroom foraging is the art and science of identifying and collecting
         wild mushrooms.
@@ -20,8 +23,8 @@ const Intro = () => (
         But beware – this hobby requires careful study and respect for nature,
         as some mushrooms can be dangerous if misidentified.
       </p>
-    </BasicWrapper>
-  </section>
+    </NarrowWrapper>
+  </SectionWrapper>
 );
 
 export default Intro;

@@ -1,10 +1,12 @@
 import { NavLink } from "react-router-dom";
 import paths from "@/routing/paths";
 import logo from "@/assets/fungi-finders.svg";
-import { BasicWrapper } from "@/wrappers";
+import { WideWrapper } from "@/wrappers";
+import styled from "@emotion/styled";
+import variables from "@/styles/_exports.module.scss";
 
 const Navigation = () => (
-  <BasicWrapper>
+  <Container>
     <img src={logo} alt="Fungi Finders" />
 
     <nav className="primary-navigation">
@@ -22,6 +24,21 @@ const Navigation = () => (
         </li>
       </ul>
     </nav>
-  </BasicWrapper>
+  </Container>
 );
 export default Navigation;
+
+const Container = styled(WideWrapper)`
+  display: flex;
+  flex-wrap: wrap;
+  gap: ${variables.size8} ${variables.size16};
+  justify-content: space-between;
+
+  .primary-navigation {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: ${variables.size8} ${variables.size16};
+    }
+  }
+`;

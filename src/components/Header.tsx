@@ -1,11 +1,15 @@
+import styled from "@emotion/styled";
 import Navigation from "./Navigation";
+import variables from "@/styles/_exports.module.scss";
 
-const Header = () => {
-  return (
-    <header className="site-header">
-      <Navigation />
-    </header>
-  );
-};
+const Header = () => (
+  <Container>
+    <Navigation />
+  </Container>
+);
 
 export default Header;
+
+const Container = styled.header`
+  padding-block: ${variables.size16};
+`;

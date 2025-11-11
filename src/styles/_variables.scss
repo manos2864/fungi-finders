@@ -1,3 +1,65 @@
-$border-radius-1: 0.25rem;
-$border-radius-2: 0.5rem;
-$border-radius-3: 0.75rem;
+@import "./colors.scss";
+@import "./fonts.scss";
+
+$sizes-map: (
+  4: var(--size-4),
+  8: var(--size-8),
+  10: var(--size-10),
+  12: var(--size-12),
+  14: var(--size-14),
+  16: var(--size-16),
+  18: var(--size-18),
+  20: var(--size-20),
+  24: var(--size-24),
+  32: var(--size-32),
+  48: var(--size-48),
+  60: var(--size-60),
+  72: var(--size-72),
+  80: var(--size-80),
+  120: var(--size-120),
+  128: var(--size-128),
+);
+
+@function size($n) {
+  @return map-get($sizes-map, $n);
+}
+
+$border-radius-1: size(4);
+$border-radius-2: size(8);
+$border-radius-3: size(12);
+
+$border-radius-variations: (
+  radius-1: $border-radius-1,
+  radius-2: $border-radius-2,
+  radius-3: $border-radius-3,
+);
+
+$colors: (
+  text-main: $text-main,
+  text-high-contrast: $text-high-contrast,
+  text-brand: $text-brand,
+  text-brand-light: $text-brand-light,
+
+  bg-accent-light: $background-accent-light,
+  bg-accent-main: $background-accent-main,
+  // Background Accent
+  bg-accent-dark: $background-accent-dark,
+  bg-extra-light: $background-extra-light,
+  bg-light: $background-light,
+  bg-main: $background-main,
+  bg-dark: $background-dark,
+  bg-extra-dark: $background-extra-dark,
+);
+
+$font-sizes: (
+  fs-h-sm: $font-size-heading-sm,
+  // section-title
+  fs-h-regular: $font-size-heading-regular,
+  fs-h-lg: $font-size-heading-lg,
+  fs-h-xl: $font-size-heading-xl,
+
+  fs-sm: $font-size-sm,
+  fs-regular: $font-size-regular,
+  fs-md: $font-size-md,
+  fs-lg: $font-size-lg,
+);

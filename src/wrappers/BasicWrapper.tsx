@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { FC, ReactNode } from "react";
+import variables from "@/styles/_exports.module.scss";
 
 export interface BasicWrapperProps {
   children: ReactNode;
@@ -15,6 +16,6 @@ export default BasicWrapper;
 const Wrapper = styled.div`
   max-width: 1130px;
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: ${variables.size16};
   box-sizing: content-box;
 `;

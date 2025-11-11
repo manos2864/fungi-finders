@@ -1,12 +1,12 @@
 @media (width > 760px) {
   :root {
-    --fs-300: 0.875rem;
-    --fs-400: 1rem;
-    --fs-500: 1.25rem;
-    --fs-600: 1.5rem;
-    --fs-700: 2rem;
-    --fs-800: 3rem;
-    --fs-900: 5rem;
-    --fs-1000: 7.5rem;
+    --fs-300: var(--size-14);
+    --fs-400: var(--size-16);
+    --fs-500: var(--size-20);
+    --fs-600: var(--size-24);
+    --fs-700: var(--size-32);
+    --fs-800: var(--size-48);
+    --fs-900: var(--size-80);
+    --fs-1000: var(--size-120);
   }
 }

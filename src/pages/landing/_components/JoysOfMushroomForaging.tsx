@@ -2,12 +2,12 @@ import Card from "@/components/Card";
 import outDoorExploration from "@/assets/outdoor-exploration.webp";
 import botanicalExpertise from "@/assets/botanical-expertise.webp";
 import culinaryDelights from "@/assets/culinary-delight.webp";
-import { BasicWrapper } from "@/wrappers";
+import { BasicWrapper, SectionWrapper } from "@/wrappers";
 
 const JoysOfMushroomForaging = () => (
-  <section>
+  <SectionWrapper>
     <BasicWrapper>
-      <h2>The joys of mushroom foraging</h2>
+      <h2 className="fs-h-regular">The joys of mushroom foraging</h2>
       <p>
         Foraging for mushrooms can be a rewarding experience for many reasons.
         People may venture off into the woods to forage for mushrooms because it
@@ -60,7 +60,7 @@ const JoysOfMushroomForaging = () => (
         </Card>
       </div>
     </BasicWrapper>
-  </section>
+  </SectionWrapper>
 );
 
 export default JoysOfMushroomForaging;
