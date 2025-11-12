@@ -4,4 +4,8 @@
   @each $key, $value in $sizes-map {
     size#{$key}: $value;
   }
+
+  @each $key, $value in $breakpoints {
+    #{$key}: #{$value};
+  }
 }

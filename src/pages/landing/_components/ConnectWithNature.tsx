@@ -5,7 +5,7 @@ import { WideWrapper, SectionWrapper } from "@/wrappers";
 const ConnectWithNature = () => (
   <SectionWrapper>
     <WideWrapper>
-      <div>
+      <div className="equal-columns" data-gap="large" data-alignment="centered">
         <div>
           <h2 className="fs-h-regular">Connect with Nature</h2>
 

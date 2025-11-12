@@ -15,7 +15,7 @@ const JoysOfMushroomForaging = () => (
         savor the satisfaction of finding a hidden culinary treasure.{" "}
       </p>
 
-      <div>
+      <div className="equal-columns">
         <Card
           imageUrl={outDoorExploration}
           imageAlt="Tightly grouped brown mushrooms growing up a mossy tree trunk"

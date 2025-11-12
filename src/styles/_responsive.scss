@@ -1,4 +1,4 @@
-@media (width > 760px) {
+@include respond(md) {
   :root {
     --fs-300: var(--size-14);
     --fs-400: var(--size-16);

@@ -5,7 +5,7 @@ import { WideWrapper, SectionWrapper } from "@/wrappers";
 const GetToKnowYourMushrooms = () => (
   <SectionWrapper className="bg-extra-dark">
     <WideWrapper>
-      <div>
+      <div className="equal-columns" data-gap="large" data-alignment="centered">
         <div>
           <img
             src={getToKnowYourMushrooms}

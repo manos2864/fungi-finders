@@ -51,6 +51,13 @@ $colors: (
   bg-extra-dark: $background-extra-dark,
 );
 
+$breakpoints: (
+  sm: 500px,
+  md: 760px,
+  lg: 1024px,
+  xl: 1440px,
+);
+
 $font-sizes: (
   fs-h-sm: $font-size-heading-sm,
   // section-title

@@ -32,7 +32,7 @@ const Section = styled.section`
 
   padding-block: var(--padding);
 
-  @media (min-width > 760px) {
+  @media (width > ${variables.md}) {
     --padding: ${variables.size128};
 
     &[data-padding="${SECTION_SIZE_VARIANTS.COMPACT}"] {
