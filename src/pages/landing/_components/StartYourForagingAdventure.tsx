@@ -3,10 +3,10 @@ import { SECTION_SIZE_VARIANTS } from "@/wrappers/SectionWrapper";
 
 const StartYourForagingAdventure = () => (
   <SectionWrapper
-    className="bg-accent-dark"
+    className="bg-accent-dark text-center"
     sizeVariant={SECTION_SIZE_VARIANTS.COMPACT}
   >
-    <NarrowWrapper>
+    <NarrowWrapper className="flow fs-lg text-high-contrast">
       <h2 className="fs-h-regular">
         Start your <span className="text-brand">Foraging Adventure!</span>
       </h2>

@@ -6,7 +6,7 @@ const ConnectWithNature = () => (
   <SectionWrapper>
     <WideWrapper>
       <div className="equal-columns" data-gap="large" data-alignment="centered">
-        <div>
+        <div className="flow fs-lg">
           <h2 className="fs-h-regular">Connect with Nature</h2>
 
           <p>

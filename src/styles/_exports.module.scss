@@ -8,4 +8,10 @@
   @each $key, $value in $breakpoints {
     #{$key}: #{$value};
   }
+
+  @each $key, $value in $colors {
+    #{$key}: #{$value};
+  }
+
+  ffHeading: $ff-heading;
 }

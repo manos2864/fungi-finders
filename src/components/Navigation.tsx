@@ -1,9 +1,10 @@
-import { NavLink } from "react-router-dom";
-import paths from "@/routing/paths";
-import logo from "@/assets/fungi-finders.svg";
-import { WideWrapper } from "@/wrappers";
 import styled from "@emotion/styled";
+import { NavLink } from "react-router-dom";
+
+import paths from "@/routing/paths";
+import { WideWrapper } from "@/wrappers";
 import variables from "@/styles/_exports.module.scss";
+import logo from "@/assets/fungi-finders.svg";
 
 const Navigation = () => (
   <Container>
@@ -26,6 +27,7 @@ const Navigation = () => (
     </nav>
   </Container>
 );
+
 export default Navigation;
 
 const Container = styled(WideWrapper)`

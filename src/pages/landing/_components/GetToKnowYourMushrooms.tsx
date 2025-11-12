@@ -13,7 +13,7 @@ const GetToKnowYourMushrooms = () => (
           />
         </div>
 
-        <div>
+        <div className="flow fs-lg">
           <h2 className="fs-h-regular">Get to know your mushrooms</h2>
 
           <p>

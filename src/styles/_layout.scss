@@ -1,5 +1,15 @@
 @import "./_variables.scss";
 
+// Select everything that has an element before it
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.grid-flow {
+  display: grid;
+  gap: var(--grid-flow-gap, size(16));
+}
+
 .equal-columns {
   display: grid;
   gap: var(--equal-columns-gap, #{size(16)});

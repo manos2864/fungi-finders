@@ -28,9 +28,7 @@ const SectionWrapper: FC<SectionWrapperProps> = ({
 export default SectionWrapper;
 
 const Section = styled.section`
-  --padding: ${variables.size60};
-
-  padding-block: var(--padding);
+  padding-block: var(--padding, ${variables.size60});
 
   @media (width > ${variables.md}) {
     --padding: ${variables.size128};
