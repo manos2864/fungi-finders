@@ -23,7 +23,7 @@
     --equal-columns-vertical-alignment: center;
   }
 
-  @include respond(sm) {
+  @include min-respond(sm) {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }

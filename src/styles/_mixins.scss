@@ -28,11 +28,23 @@
   }
 }
 
-@mixin respond($key) {
+@mixin min-respond($key) {
   $value: map-get($breakpoints, $key);
 
   @if $value {
     @media (width > #{$value}) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint found for '#{$key}' in $breakpoints map.";
+  }
+}
+
+@mixin max-respond($key) {
+  $value: map-get($breakpoints, $key);
+
+  @if $value {
+    @media (width < #{$value}) {
       @content;
     }
   } @else {
