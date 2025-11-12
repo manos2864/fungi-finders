@@ -95,6 +95,6 @@ a {
   }
 }
 
-img {
+img:not([src^="data:image/svg"]) {
   border-radius: $border-radius-3;
 }
