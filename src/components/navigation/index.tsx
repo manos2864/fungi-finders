@@ -2,11 +2,11 @@ import { useRef } from "react";
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
 
-import paths from "@/routing/paths";
 import { WideWrapper } from "@/wrappers";
 import variables from "@/styles/_exports.module.scss";
 import logo from "@/assets/fungi-finders.svg";
 import hamburger from "@/assets/hamburger.svg";
+import { routes } from "./helpers";
 
 const Navigation = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -37,17 +37,11 @@ const Navigation = () => {
 
       <nav id="primary-nav" className="primary-navigation">
         <ul role="list">
-          <li>
-            <NavLink to={paths.landing}>Discover</NavLink>
-          </li>
-
-          <li>
-            <NavLink to={paths.mushroom_guide}>Mushroom Guide</NavLink>
-          </li>
-
-          <li>
-            <NavLink to={paths.faq}>FAQ</NavLink>
-          </li>
+          {routes.map((route) => (
+            <li key={route.title}>
+              <NavLink to={route.path}>{route.title}</NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </Container>
