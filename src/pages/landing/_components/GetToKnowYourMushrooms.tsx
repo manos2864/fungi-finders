@@ -1,4 +1,4 @@
-import NavButton from "@/components/NavButton";
+import NavButton from "@/components/common/NavButton";
 import getToKnowYourMushrooms from "@/assets/get-to-know.webp";
 import { WideWrapper, SectionWrapper } from "@/wrappers";
 

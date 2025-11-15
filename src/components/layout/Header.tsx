@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import Navigation from "@/components/navigation/index";
+import Navigation from "@/components/layout/navigation";
 import variables from "@/styles/_exports.module.scss";
 
 const Header = () => (

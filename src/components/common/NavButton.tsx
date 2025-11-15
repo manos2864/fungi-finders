@@ -13,7 +13,7 @@ const NavButton: FC<ButtonProps> = ({ children, ...rest }) => (
     className="border-radius-2 bg-accent-main fs-md"
     {...rest}
   >
-    {children}{" "}
+    {children}
   </Container>
 );
 

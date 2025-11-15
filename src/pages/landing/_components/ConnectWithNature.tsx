@@ -1,4 +1,4 @@
-import NavButton from "@/components/NavButton";
+import NavButton from "@/components/common/NavButton";
 import connectWithNature from "@/assets/nature.webp";
 import { WideWrapper, SectionWrapper } from "@/wrappers";
 
