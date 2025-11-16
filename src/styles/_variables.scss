@@ -2,6 +2,7 @@
 @import "./fonts.scss";
 
 $sizes-map: (
+  2: var(--size-2),
   4: var(--size-4),
   8: var(--size-8),
   10: var(--size-10),
@@ -49,6 +50,9 @@ $colors: (
   bg-main: $background-main,
   bg-dark: $background-dark,
   bg-extra-dark: $background-extra-dark,
+  bg-red: $background-red,
+  bg-teal: $background-teal,
+  bg-orange: $background-orange,
 );
 
 $breakpoints: (

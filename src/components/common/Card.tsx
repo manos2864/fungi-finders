@@ -38,7 +38,8 @@ const Card: FC<CardProps> = ({
 export default Card;
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--card-gap, ${variables.size16});
   padding: ${variables.size16};
 
