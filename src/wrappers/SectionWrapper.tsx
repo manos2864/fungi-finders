@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { FC, ReactNode } from "react";
+import { type ReactNode, forwardRef } from "react";
 import variables from "@/styles/_exports.module.scss";
 
 export const SECTION_SIZE_VARIANTS = {
@@ -12,17 +12,21 @@ type SIZE_VARIANT_ENUMS =
 interface SectionWrapperProps {
   children: ReactNode;
   className?: string;
+  id?: string;
   sizeVariant?: SIZE_VARIANT_ENUMS;
 }
 
-const SectionWrapper: FC<SectionWrapperProps> = ({
-  children,
-  sizeVariant,
-  className,
-}) => (
-  <Section data-padding={sizeVariant} className={className || ""}>
-    {children}
-  </Section>
+const SectionWrapper = forwardRef<HTMLElement, SectionWrapperProps>(
+  ({ children, id, sizeVariant, className }, ref) => (
+    <Section
+      id={id}
+      ref={ref}
+      data-padding={sizeVariant}
+      className={className || ""}
+    >
+      {children}
+    </Section>
+  )
 );
 
 export default SectionWrapper;

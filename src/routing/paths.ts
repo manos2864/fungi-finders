@@ -1,7 +1,7 @@
 const paths = {
   landing: "/",
   mushroom_guide: "/mushroom-guide",
-  faq: "/faq",
+  faq: "/mushroom-guide#faq",
 };
 
 export default paths;

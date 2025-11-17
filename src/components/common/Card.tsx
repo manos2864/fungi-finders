@@ -6,6 +6,7 @@ interface CardProps {
   imageUrl?: string;
   imageAlt?: string;
   title: string;
+  className?: string;
   bgColor?:
     | "light"
     | "extra-light"
@@ -21,17 +22,26 @@ const Card: FC<CardProps> = ({
   imageUrl,
   title,
   bgColor,
+  className,
   imageAlt,
   children,
 }) => (
   <Container
-    className={`card border-radius-3 ${bgColor ? `bg-${bgColor}` : ""}`}
+    className={`card border-radius-3 ${bgColor ? `bg-${bgColor}` : ""} ${
+      className || ""
+    }`}
   >
-    {imageUrl ? <img src={imageUrl} alt={imageAlt || ""} /> : null}
+    {imageUrl ? (
+      <div className="card__image">
+        <img src={imageUrl} alt={imageAlt || ""} />
+      </div>
+    ) : null}
 
-    <h3 className="card__title">{title}</h3>
+    <div className="card__description">
+      <h3 className="card__title">{title}</h3>
 
-    {children}
+      {children}
+    </div>
   </Container>
 );
 
@@ -39,18 +49,29 @@ export default Card;
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: var(--card-gap, ${variables.size16});
+  flex-direction: var(--card-flex-direction, column);
   padding: ${variables.size16};
-
-  img {
-    border-radius: ${variables.size8};
-  }
+  gap: var(--card-gap, ${variables.size16});
 
   .card {
     &__title {
       font-size: var(--card-title-font-size, ${variables.size24});
+      text-wrap: pretty;
       color: var(--card-title-color, ${variables["text-brand"]});
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      gap: var(--card-gap, ${variables.size16});
+    }
+
+    &__image {
+      img {
+        min-block-size: 100%;
+        object-fit: cover;
+        border-radius: ${variables.size8};
+      }
     }
   }
 `;

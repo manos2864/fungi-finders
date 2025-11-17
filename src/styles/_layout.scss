@@ -5,6 +5,12 @@
   margin-top: var(--flow-spacer, 1em);
 }
 
+.flex-group {
+  display: flex;
+  gap: size(8);
+  flex-wrap: wrap;
+}
+
 .grid-flow {
   display: grid;
   gap: var(--grid-flow-gap, size(16));
