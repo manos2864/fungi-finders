@@ -1,6 +1,7 @@
 import NavButton from "@/components/common/NavButton";
 import connectWithNature from "@/assets/nature.webp";
 import { WideWrapper, SectionWrapper } from "@/wrappers";
+import paths from "@/routing/paths";
 
 const ConnectWithNature = () => (
   <SectionWrapper>
@@ -14,7 +15,7 @@ const ConnectWithNature = () => (
             mushrooms with fellow enthusiasts.
           </p>
 
-          <NavButton to="">
+          <NavButton to={paths.mushroom_guide}>
             Learn More
             <span className="sr-only">
               {" "}

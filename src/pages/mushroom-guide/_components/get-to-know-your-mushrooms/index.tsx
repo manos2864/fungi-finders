@@ -2,20 +2,31 @@ import styled from "@emotion/styled";
 
 import { BasicWrapper, SectionWrapper } from "@/wrappers";
 import variables from "@/styles/_exports.module.scss";
-import List from "./List";
-import Filters from "./Filters";
+import List from "./_components/list";
+import Filters from "./_components/Filters";
+import { forwardRef, useState } from "react";
+import { SEASONS_ENUMS, TYPE_ENUMS } from "./helpers";
 
-const GetToKnowYourMushrooms = () => (
-  <Container>
-    <BasicWrapper className="flow">
-      <h2 className="fs-h-regular">Get to know your mushrooms</h2>
+const DEFAULT_FILTERS = {
+  season: "all" as SEASONS_ENUMS,
+  type: "all" as TYPE_ENUMS,
+};
 
-      <Filters />
+const GetToKnowYourMushrooms = forwardRef<HTMLDivElement>((_, ref) => {
+  const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
-      <List />
-    </BasicWrapper>
-  </Container>
-);
+  return (
+    <Container id="get-to-know-your-mushrooms" ref={ref}>
+      <BasicWrapper className="flow">
+        <h2 className="fs-h-regular">Get to know your mushrooms</h2>
+
+        <Filters setFilters={setFilters} filters={filters} />
+
+        <List filters={filters} />
+      </BasicWrapper>
+    </Container>
+  );
+});
 
 export default GetToKnowYourMushrooms;
 

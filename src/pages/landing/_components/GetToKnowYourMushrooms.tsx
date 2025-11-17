@@ -1,6 +1,7 @@
 import NavButton from "@/components/common/NavButton";
 import getToKnowYourMushrooms from "@/assets/get-to-know.webp";
 import { WideWrapper, SectionWrapper } from "@/wrappers";
+import paths from "@/routing/paths";
 
 const GetToKnowYourMushrooms = () => (
   <SectionWrapper className="bg-extra-dark">
@@ -28,7 +29,7 @@ const GetToKnowYourMushrooms = () => (
             to help you out!
           </p>
 
-          <NavButton to="">
+          <NavButton to={paths.get_to_know_your_mushrooms}>
             <span className="sr-only">
               Learn more about with mushrooms using our{" "}
             </span>

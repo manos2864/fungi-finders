@@ -16,6 +16,7 @@ interface CardProps {
     | "accent-main"
     | "accent-light";
   children: ReactNode;
+  style?: Record<string, string>;
 }
 
 const Card: FC<CardProps> = ({
@@ -24,9 +25,11 @@ const Card: FC<CardProps> = ({
   bgColor,
   className,
   imageAlt,
+  style,
   children,
 }) => (
   <Container
+    style={style}
     className={`card border-radius-3 ${bgColor ? `bg-${bgColor}` : ""} ${
       className || ""
     }`}

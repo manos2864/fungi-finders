@@ -8,10 +8,18 @@ import WhereToLook from "./_components/WhereToLook";
 const MushroomGuide = () => {
   const { hash } = useLocation();
   const faqRef = useRef<HTMLDivElement | null>(null);
+  const getToKnowYourMushroomsRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (hash === "#faq" && faqRef.current) {
       faqRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (
+      hash === "#get-to-know-your-mushrooms" &&
+      getToKnowYourMushroomsRef.current
+    ) {
+      getToKnowYourMushroomsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [hash]);
 
@@ -19,7 +27,7 @@ const MushroomGuide = () => {
     <>
       <QuickReference />
       <WhereToLook />
-      <GetToKnowYourMushrooms />
+      <GetToKnowYourMushrooms ref={getToKnowYourMushroomsRef} />
       <Faq ref={faqRef} />
     </>
   );
