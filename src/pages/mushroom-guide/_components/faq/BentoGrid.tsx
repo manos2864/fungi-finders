@@ -7,24 +7,19 @@ import variables from "@/styles/_exports.module.scss";
 const BentoGrid = () => (
   <Container>
     {entries.map((entry, i) => (
-      <GridAreaCard
-        gridArea={`card-${i}`}
+      <Card
         bgColor="light"
         imageUrl={entry.imageUrl}
         imageAlt={entry.imageAlt}
         title={entry.title}
       >
         <p>{entry.content}</p>
-      </GridAreaCard>
+      </Card>
     ))}
   </Container>
 );
 
 export default BentoGrid;
-
-const GridAreaCard = styled(Card)<{ gridArea: string }>`
-  // grid-area: ${({ gridArea }) => gridArea};
-`;
 
 const Container = styled.div`
   display: grid;
@@ -33,27 +28,27 @@ const Container = styled.div`
 
   gap: ${variables.size16};
   grid-template-areas:
-    "card-0"
-    "card-1"
-    "card-2"
-    "card-3";
+    "card-one"
+    "card-two"
+    "card-three"
+    "card-four";
 
   @media (width > ${variables["sm-md"]}) {
-    grid-template-areas: "card-0 card-1" "card-2 card-3";
+    grid-template-areas: "card-one card-two" "card-three card-four";
   }
 
   @media (width > ${variables.lg}) {
     grid-template-areas:
-      "card-0 card-1 card-3"
-      "card-2 card-2 card-3";
+      "card-one card-two card-four"
+      "card-three card-three card-four";
   }
 
   .card:nth-child(1) {
-    grid-area: card-0;
+    grid-area: card-one;
   }
 
   .card:nth-child(2) {
-    grid-area: card-1;
+    grid-area: card-two;
 
     @media (width > ${variables.lg}) {
       --card-flex-direction: column-reverse;
@@ -67,7 +62,7 @@ const Container = styled.div`
   }
 
   .card:nth-child(3) {
-    grid-area: card-2;
+    grid-area: card-three;
 
     @media (width > ${variables.lg}) {
       --card-flex-direction: row;
@@ -75,7 +70,7 @@ const Container = styled.div`
   }
 
   .card:nth-child(4) {
-    grid-area: card-3;
+    grid-area: card-four;
 
     .card {
       &__image {
