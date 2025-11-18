@@ -82,6 +82,9 @@ const CardContainer = styled.div`
   );
 
   .card {
+    animation: fade-in both;
+    animation-timeline: view();
+
     &__description {
       flex: 1;
     }

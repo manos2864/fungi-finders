@@ -1,18 +1,21 @@
 // Base Colors
-$text-main: var(--clr-gray-100);
-$text-high-contrast: var(--clr-white);
-$text-brand: var(--clr-brand-500);
-$text-brand-light: var(--clr-brand-400);
+$text-main: var(--clr-text-main);
+$text-high-contrast: var(--clr-text-high-contrast);
+$text-dark-contrast: var(--clr-text-dark-contrast);
+$text-gray: var(--clr-text-gray);
 
-$background-accent-light: var(--clr-green-400);
-$background-accent-main: var(--clr-green-500);
-$background-accent-dark: var(--clr-green-600);
-$background-red: var(--clr-red-500);
-$background-orange: var(--clr-orange-500);
-$background-teal: var(--clr-teal-500);
+$text-brand: var(--clr-text-brand);
+$text-brand-light: var(--clr-text-brand-light);
 
-$background-extra-light: var(--clr-brown-500);
-$background-light: var(--clr-brown-600);
-$background-main: var(--clr-brown-700);
-$background-dark: var(--clr-brown-800);
-$background-extra-dark: var(--clr-brown-900);
+$background-accent-light: var(--clr-background-accent-light);
+$background-accent-main: var(--clr-background-accent-main);
+$background-accent-dark: var(--clr-background-accent-dark);
+$background-red: var(--clr-background-red);
+$background-orange: var(--clr-background-orange);
+$background-teal: var(--clr-background-teal);
+
+$background-extra-light: var(--clr-background-extra-light);
+$background-light: var(--clr-background-light);
+$background-main: var(--clr-background-main);
+$background-dark: var(--clr-background-dark);
+$background-extra-dark: var(--clr-background-extra-dark);

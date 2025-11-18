@@ -11,5 +11,7 @@ const Header = () => (
 export default Header;
 
 const Container = styled.header`
+  overflow-x: clip;
+  position: relative;
   padding-block: ${variables.size16};
 `;

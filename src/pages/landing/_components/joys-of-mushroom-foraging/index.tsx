@@ -2,6 +2,7 @@ import Card from "@/components/common/Card";
 import { cardsInfo } from "./helpers";
 
 import { BasicWrapper, SectionWrapper } from "@/wrappers";
+import styled from "@emotion/styled";
 
 const JoysOfMushroomForaging = () => (
   <SectionWrapper>
@@ -14,7 +15,7 @@ const JoysOfMushroomForaging = () => (
         savor the satisfaction of finding a hidden culinary treasure.{" "}
       </p>
 
-      <div className="equal-columns">
+      <Container className="equal-columns">
         {cardsInfo.map((card) => (
           <Card
             key={card.title}
@@ -26,9 +27,16 @@ const JoysOfMushroomForaging = () => (
             <p>{card.description}</p>
           </Card>
         ))}
-      </div>
+      </Container>
     </BasicWrapper>
   </SectionWrapper>
 );
 
 export default JoysOfMushroomForaging;
+
+const Container = styled.div`
+  .card {
+    animation: fade-in both;
+    animation-timeline: view();
+  }
+`;

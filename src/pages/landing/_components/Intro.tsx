@@ -16,7 +16,7 @@ const Intro = () => (
       </h1>
     </BasicWrapper>
 
-    <NarrowWrapper className="flow">
+    <NarrowWrapper className="flow hero__description">
       <p>
         Mushroom foraging is the art and science of identifying and collecting
         wild mushrooms.
@@ -42,4 +42,7 @@ const Container = styled(SectionWrapper)`
   background-image: url(${heroImg});
   background-size: cover;
   background-position: center;
+  animation: fade-out forwards;
+  animation-timeline: view();
+  animation-range-start: exit;
 `;

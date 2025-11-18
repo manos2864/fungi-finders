@@ -39,7 +39,9 @@ const Navigation = () => {
         <ul role="list">
           {routes.map((route) => (
             <li key={route.title}>
-              <NavLink to={route.path}>{route.title}</NavLink>
+              <NavLink className="text-brown-light-gray-dark" to={route.path}>
+                {route.title}
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -74,6 +76,23 @@ const Container = styled(WideWrapper)`
 
   [aria-expanded="true"] ~ .primary-navigation {
     display: block;
+    opacity: 1;
+    translate: 0 0;
+
+    @starting-style {
+      opacity: 0;
+      translate: 100% 0;
+    }
+
+    li {
+      translate: 0 0;
+      opacity: 1;
+
+      @starting-style {
+        opacity: 0;
+        translate: 50% 0;
+      }
+    }
   }
 
   .primary-navigation {
@@ -86,6 +105,11 @@ const Container = styled(WideWrapper)`
     @media (width < ${variables.md}) {
       display: none;
       position: absolute;
+      opacity: 0;
+      transition: opacity 1s, display 1s, translate 1s;
+      transition-behavior: allow-discrete;
+      translate: 100% 0;
+
       z-index: 1;
       top: 0;
       right: 0;
@@ -99,6 +123,21 @@ const Container = styled(WideWrapper)`
       ul {
         gap: 0;
         flex-direction: column;
+      }
+
+      li {
+        --li-delay-transition: 0.5s;
+        translate: 50%;
+        transition: translate 1s var(--li-delay-transition),
+          opacity 1s var(--li-delay-transition);
+
+        &:nth-child(2) {
+          --li-delay-transition: 0.8s;
+        }
+
+        &:nth-child(3) {
+          --li-delay-transition: 1s;
+        }
       }
 
       li + li {

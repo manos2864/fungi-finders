@@ -17,14 +17,14 @@ const GetToKnowYourMushrooms = () => (
         <div className="flow fs-lg">
           <h2 className="fs-h-regular">Get to know your mushrooms</h2>
 
-          <p>
+          <p className="text-gray-light-brown-dark">
             Successful and safe mushroom foraging begins with a deep
             understanding of the species you'll encounter in the wild - not just
             what the edible ones look like, but their toxic look-alikes,
             seasonal patterns, and preferred habitats.
           </p>
 
-          <p>
+          <p className="text-gray-light-brown-dark">
             It can feel like a big task, but we’ve got a handy reference guide
             to help you out!
           </p>

@@ -18,3 +18,24 @@
 .text-center {
   text-align: center;
 }
+
+.resizing * {
+  transition: none !important;
+  animation-play-state: paused;
+}
+
+.text-brown-light-gray-dark {
+  color: var(--text-brown-light-gray-dark-color, var(--clr-text-gray));
+
+  @media (prefers-color-scheme: light) {
+    --text-brown-light-gray-dark-color: var(--clr-text-dark-contrast);
+  }
+}
+
+.text-gray-light-brown-dark {
+  color: var(--text-gray-light-brown-dark, var(--clr-text-dark-contrast));
+
+  @media (prefers-color-scheme: light) {
+    --text-gray-light-brown-dark: var(--clr-text-gray);
+  }
+}

@@ -41,4 +41,7 @@ const Container = styled(SectionWrapper)`
   background-image: url(${heroImg});
   background-size: cover;
   background-position: center;
+  animation: fade-out forwards;
+  animation-timeline: view();
+  animation-range-start: exit;
 `;

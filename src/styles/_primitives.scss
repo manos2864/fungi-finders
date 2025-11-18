@@ -2,11 +2,19 @@
   // Colors
   --clr-white: hsl(0, 0%, 100%);
   --clr-gray-100: hsl(0, 2%, 79%);
+
   --clr-brand-400: hsl(25, 88%, 75%);
   --clr-brand-500: hsl(25, 88%, 66%);
+
+  --clr-green-300: hsl(143, 19%, 69%);
   --clr-green-400: hsl(143, 19%, 49%);
   --clr-green-500: hsl(143, 38%, 37%);
   --clr-green-600: hsl(145, 29%, 19%);
+
+  --clr-brown-100: hsl(10, 5%, 90%);
+  --clr-brown-200: hsl(9, 7%, 85%);
+  --clr-brown-300: hsl(9, 8%, 75%);
+  --clr-brown-400: hsl(0, 6%, 60%);
   --clr-brown-500: hsl(10, 5%, 25%);
   --clr-brown-600: hsl(9, 7%, 21%);
   --clr-brown-700: hsl(9, 8%, 16%);
@@ -16,6 +24,40 @@
   --clr-orange-500: hsl(28, 43%, 28%);
   --clr-red-500: hsl(359, 34%, 24%);
   --clr-teal-500: hsl(186, 42%, 25%);
+
+  // Theme Colors
+  --clr-text-main: var(--clr-gray-100);
+  --clr-text-gray: var(--clr-gray-100);
+  --clr-text-high-contrast: var(--clr-white);
+  --clr-text-dark-contrast: (--clr-brown-900);
+  --clr-text-brand: var(--clr-brand-500);
+  --clr-text-brand-light: var(--clr-brand-400);
+
+  --clr-background-accent-light: var(--clr-green-400);
+  --clr-background-accent-main: var(--clr-green-500);
+  --clr-background-accent-dark: var(--clr-green-600);
+
+  --clr-background-red: var(--clr-red-500);
+  --clr-background-orange: var(--clr-orange-500);
+  --clr-background-teal: var(--clr-teal-500);
+
+  --clr-background-extra-light: var(--clr-brown-500);
+  --clr-background-light: var(--clr-brown-600);
+  --clr-background-main: var(--clr-brown-700);
+  --clr-background-dark: var(--clr-brown-800);
+  --clr-background-extra-dark: var(--clr-brown-900);
+
+  @media (prefers-color-scheme: light) {
+    --clr-text-main: var(--clr-brown-700);
+
+    --clr-background-accent-dark: var(--clr-green-300);
+
+    --clr-background-extra-light: var(--clr-brown-100);
+    --clr-background-light: var(--clr-brown-200);
+    --clr-background-main: var(--clr-brown-300);
+    --clr-background-dark: var(--clr-brown-400);
+    --clr-background-extra-dark: var(--clr-brown-500);
+  }
 
   // Sizes
   --size-2: 0.125rem;
