@@ -1,4 +1,4 @@
-# 🚀 Star Wars Movies App
+# 🚀 Fungi Finders App
 
 A small React application built with **TypeScript**, **Vite**, and **SWC**, allowing users to learn more informations about mushrooms.  
 Includes clean code, responsive layout, animations, theme & new css techniques.
