@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import Faq from "./_components/faq";
 import GetToKnowYourMushrooms from "./_components/get-to-know-your-mushrooms";
-import QuickReference from "./_components/QuickReference";
+import Hero from "./_components/Hero";
 import WhereToLook from "./_components/WhereToLook";
 
 const MushroomGuide = () => {
@@ -25,7 +25,7 @@ const MushroomGuide = () => {
 
   return (
     <>
-      <QuickReference />
+      <Hero />
       <WhereToLook />
       <GetToKnowYourMushrooms ref={getToKnowYourMushroomsRef} />
       <Faq ref={faqRef} />

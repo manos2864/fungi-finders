@@ -4,38 +4,39 @@ import { BasicWrapper, NarrowWrapper, SectionWrapper } from "@/wrappers";
 import { SECTION_SIZE_VARIANTS } from "@/wrappers/SectionWrapper";
 import heroImg from "@/assets/hero.webp";
 
-const QuickReference = () => (
+const Hero = () => (
   <Container
     className="hero flow fs-md text-high-contrast text-center"
     sizeVariant={SECTION_SIZE_VARIANTS.COMPACT}
   >
     <BasicWrapper>
       <h1 className="fs-h-lg">
-        Quick reference{" "}
-        <span className="text-brand fs-h-xl">Mushroom Guide</span>
+        Discover the World of{" "}
+        <span className="text-brand fs-h-xl">Mushroom Foraging</span>
       </h1>
     </BasicWrapper>
 
-    <NarrowWrapper className="flow">
+    <NarrowWrapper className="flow hero__description">
       <p>
-        Discover a wide array of mushrooms from around the world, each with its
-        own unique flavor profile and culinary uses.
+        Mushroom foraging is the art and science of identifying and collecting
+        wild mushrooms.
       </p>
 
       <p>
-        Whether you're looking for earthy porcinis, delicate chanterelles, or
-        meaty shiitakes, our selection has something for every palate.
+        It's a practice that combines outdoor exploration, botanical knowledge,
+        and culinary adventure. Foragers venture into forests, fields, and even
+        urban green spaces to discover these hidden treasures.
       </p>
 
       <p>
-        Explore the diverse shapes, sizes, and colors of these fungi to elevate
-        your dishes to new heights.
+        But beware – this hobby requires careful study and respect for nature,
+        as some mushrooms can be dangerous if misidentified.
       </p>
     </NarrowWrapper>
   </Container>
 );
 
-export default QuickReference;
+export default Hero;
 
 const Container = styled(SectionWrapper)`
   background-image: url(${heroImg});
